@@ -1,7 +1,7 @@
 window.onload = function(){
 // get the elements from index.html
     const cover = document.getElementById('song-cover');
-    cover.src = 'after-hours-deluxe.jpeg'
+    cover.src = 'mdm.jpg'
 
 // load the song cover
     cover.onload = function(){
@@ -28,5 +28,6 @@ window.onload = function(){
     // if the song cover fails to load
     cover.onerror = function() {
             console.error('Image failed to load');
+            alert('Image failed to load');
     }
 }
