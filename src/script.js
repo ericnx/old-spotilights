@@ -1,7 +1,7 @@
 window.onload = function(){
 // get the elements from index.html
     const cover = document.getElementById('song-cover');
-    cover.src = 'mdm.jpg'
+    cover.src = 'after-hours-deluxe.jpeg'
 
 // load the song cover
     cover.onload = function(){
@@ -13,6 +13,7 @@ window.onload = function(){
                    - returns an array containing those colors
                      ex. [[r,g,b], [130,52,23], ...]
                    - double array
+                   - test
         */ 
         
         for (let i = 0; i < palette.length; i++){
