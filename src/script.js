@@ -13,7 +13,7 @@ window.onload = function(){
                    - returns an array containing those colors
                      ex. [[r,g,b], [130,52,23], ...]
                    - double array
-                   - test 8/14/24
+                   - test 9/14/24
         */ 
         
         for (let i = 0; i < palette.length; i++){
