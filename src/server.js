@@ -1,9 +1,12 @@
-require('dotenv').config();
+const dotenv = require('dotenv');
 const express = require('express');
 const axios = require('axios');
 const querystring = require('querystring');
-
+const cors = require('cors');
+ 
+dotenv.config();
 const app = express();
+app.use(cors);
 const port = 5500;
 
 const clientID = process.env.CLIENT_ID;
@@ -92,6 +95,7 @@ app.get('/', async (req, res) => {
         };
         res.send(`<h1>Now playing: ${song.title} by ${song.artist}</h1>
                   <img src="${song.cover}" width="300">`);
+        res.json(song);
     } catch (error) {
         console.error('Error getting the current song:', error.response ? error.response.data : error.message);
         res.status(500).send('Error getting current song');
