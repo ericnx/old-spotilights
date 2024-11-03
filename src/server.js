@@ -1,10 +1,11 @@
-const dotenv = require('dotenv');
-const express = require('express');
-const axios = require('axios');
-const querystring = require('querystring');
-const cors = require('cors');
- 
-dotenv.config();
+// const dotenv = require('dotenv');
+// const express = require('express');
+// const axios = require('axios');
+// const querystring = require('querystring');
+// const cors = require('cors');
+
+require('dotenv').config();
+// dotenv.config();
 const app = express();
 app.use(cors());
 const port = 5501;
