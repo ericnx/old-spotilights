@@ -1,0 +1,54 @@
+body{
+    background-color: rgba(0, 0, 0, 0.839);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#song-cover{
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+#song-canvas{
+    display: none;
+}
+
+h2{
+    color: white;
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+h3{
+    color: rgb(128, 128, 128);
+    margin: 0px;
+    margin-bottom: 25px;
+}
+
+#colors{
+    display: flex;
+}
+
+.color-squares{
+    height: 100px;
+    width: 100px;
+}
+
+#color-1{
+    background-color: rgb(237, 65, 65);
+}
+#color-2{
+    background-color: rgb(65, 96, 237);
+}
+#color-3{
+    background-color: rgb(237, 237, 65);
+}
+#color-4{
+    background-color: rgb(59, 221, 69);
+}
+#color-5{
+    background-color: rgb(108, 65, 237);
+}
