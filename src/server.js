@@ -4,6 +4,7 @@ const axios = require('axios');
 const cors = require('cors');
 
 const app = express();
+app.use(express.static(path.join(__dirname, 'src')));
 app.use(cors());
 const port = 5501;
 
