@@ -6,8 +6,8 @@ const cors = require('cors');
  
 dotenv.config();
 const app = express();
-app.use(cors);
-const port = 5500;
+app.use(cors());
+const port = 5501;
 
 const clientID = process.env.CLIENT_ID;
 const clientSecret = process.env.CLIENT_SECRET;

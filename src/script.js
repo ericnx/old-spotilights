@@ -5,7 +5,7 @@ window.onload = async function(){
     const artistName = document.getElementById('artist-name');
 
     try{
-        const response = await fetch('http://localhost:5500/');
+        const response = await fetch('http://localhost:5501/');
         const song = await response.json;
         cover.src = song.cover;
         songName.innerHTML = song.title;
@@ -36,8 +36,8 @@ window.onload = async function(){
         }
         // if the song cover fails to load..
         cover.onerror = function() {
-                console.error('Image failed to load');
-                alert('Image failed to load');
+                console.error('Error: Image failed to load');
+                alert('Error: Image failed to load');
         }
     }
     catch(error){
