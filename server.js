@@ -1,11 +1,8 @@
-// const dotenv = require('dotenv');
-// const express = require('express');
-// const axios = require('axios');
-// const querystring = require('querystring');
-// const cors = require('cors');
-
 require('dotenv').config();
-// dotenv.config();
+const express = require('express');
+const axios = require('axios');
+const cors = require('cors');
+
 const app = express();
 app.use(cors());
 const port = 5501;
@@ -94,8 +91,6 @@ app.get('/', async (req, res) => {
             artist: response.data.item.artists[0].name,
             cover: response.data.item.album.images[0].url,
         };
-        res.send(`<h1>Now playing: ${song.title} by ${song.artist}</h1>
-                  <img src="${song.cover}" width="300">`);
         res.json(song);
     } catch (error) {
         console.error('Error getting the current song:', error.response ? error.response.data : error.message);
