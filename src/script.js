@@ -34,7 +34,7 @@ window.onload = async function(){
             const domColor = `${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]}`;
             console.log(`Most dominant color is: RGB(${domColor})`);
         }
-        // if the song cover fails to load
+        // if the song cover fails to load..
         cover.onerror = function() {
                 console.error('Image failed to load');
                 alert('Image failed to load');
