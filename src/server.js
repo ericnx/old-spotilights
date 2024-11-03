@@ -3,7 +3,6 @@
 // const axios = require('axios');
 // const querystring = require('querystring');
 // const cors = require('cors');
-//test
 
 require('dotenv').config();
 // dotenv.config();
@@ -24,7 +23,7 @@ const tokenUrl = 'https://accounts.spotify.com/api/token';
 // Redirects the user to Spotify's auth page
 app.get('/login', (req, res) => {
     const theScope = 'user-read-playback-state user-read-currently-playing';
-    const authQueryParams = querystring.stringify({
+    const authQueryParams = new URLSearchParams({
         response_type: 'code',
         client_id: clientID,
         scope: theScope,
@@ -46,7 +45,7 @@ app.get('/callback', async (req, res) => {
     const authOptions = {
         method: 'POST',
         url: tokenUrl,
-        data: querystring.stringify({
+        data: new URLSearchParams({
             code: theCode,
             redirect_uri: redirectUri,
             grant_type: 'authorization_code',
